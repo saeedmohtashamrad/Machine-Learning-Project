@@ -45,12 +45,12 @@ def get_dataset(name):
 
     else:
         data = datasets.load_breast_cancer()
-        st.write (f'Precision =', precision_score(y_test, y_pred))
-        st.write (f'Recall =', recall_score(y_test, y_pred))
-        st.write (f'F1_score =', f1_score(y_test, y_pred))
     X = data.data
     y = data.target
     return X, y
+        st.write (f'Precision =', precision_score(y_test, y_pred))
+        st.write (f'Recall =', recall_score(y_test, y_pred))
+        st.write (f'F1_score =', f1_score(y_test, y_pred))
 
 X, y = get_dataset(dataset_name)
 st.write('Shape of dataset:', X.shape)
