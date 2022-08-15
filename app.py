@@ -117,6 +117,6 @@ st.write(f'Accuracy =', acc)
 
 
 cmx = confusion_matrix(y_test, y_pred)
-fig = sns.heatmap(cmx, square= True, annot= True)
+sns.heatmap(cmx, square= True, annot= True)
 
-st.pyplot(fig)
+#st.pyplot(fig)
