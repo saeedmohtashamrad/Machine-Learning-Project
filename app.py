@@ -10,7 +10,12 @@ from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
 
 st.title('Machine Learning Project')
 
@@ -95,16 +100,21 @@ clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 
 acc = accuracy_score(y_test, y_pred)
+f1s = f1_score(y_test, y_pred)
+prc = precision_score(y_test, y_pred)
+rec = recall_score(y_test, y_pred)
 
 st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc)
+st.write(f'precision =', prc)
+st.write(f'recall =', rec)
+st.write(f'f1_score =', f1s)
 
 #### Evaluation ####
 
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import classification_report
 
-st.write (f'Report = {classification_report(y_test, y_pred)}')
+
+#st.write (f'Report = {classification_report(y_test, y_pred)}')
 
 
 cmx = confusion_matrix(y_test, y_pred)
