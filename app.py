@@ -108,6 +108,6 @@ print (classification_report(y_test, y_pred))
 
 
 cmx = confusion_matrix(y_test, y_pred)
-sns.heatmap(cmx, square= True, annot= True)
+fig = sns.heatmap(cmx, square= True, annot= True)
        
-#st.plt(fig)
+st.plt(fig)
