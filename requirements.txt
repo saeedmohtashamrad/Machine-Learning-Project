@@ -1,4 +1,4 @@
-xgboost==1.4.2
+xgboost==1.6.1
 numpy>=1.11.0
 pandas>=0.19
 streamlit
