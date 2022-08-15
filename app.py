@@ -98,3 +98,16 @@ acc = accuracy_score(y_test, y_pred)
 
 st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc)
+
+#### Evaluation ####
+
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+
+#print (classification_report(y_test, y_pred))
+
+
+cmx = confusion_matrix(y_test, y_pred)
+sns.heatmap(cmx, square= True, annot= True)
+       
+#st.plt(fig)
