@@ -104,7 +104,7 @@ st.write(f'Accuracy =', acc)
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 
-#print (classification_report(y_test, y_pred))
+print (classification_report(y_test, y_pred))
 
 
 cmx = confusion_matrix(y_test, y_pred)
