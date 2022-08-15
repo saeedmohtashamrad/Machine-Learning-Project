@@ -117,16 +117,8 @@ st.write(f'Accuracy =', acc)
 
 
 cmx = confusion_matrix(y_test, y_pred)
-sns.heatmap(cmx, square= True, annot= True)
+fig = sns.heatmap(cmx, square= True, annot= True)
        
-fig = plt.figure()
-plt.scatter(cmx, y_pred,
-        c=y, alpha=0.8,
-        cmap='viridis')
+fig2 = plt.figure()
 
-plt.xlabel('Principal Component 1')
-plt.ylabel('Principal Component 2')
-plt.colorbar()
-
-#plt.show()
 st.pyplot(fig)
