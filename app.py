@@ -103,15 +103,19 @@ acc = accuracy_score(y_test, y_pred)
 
 st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc)
-st.write (f'Precision =', precision_score(y_test, y_pred))
-st.write (f'Recall =', recall_score(y_test, y_pred))
-st.write (f'F1_score =', f1_score(y_test, y_pred))
+def get_dataset(name):
+    data = None
+    if name == 'Breast Cancer':
+        st.write (f'Precision =', precision_score(y_test, y_pred))
+        st.write (f'Recall =', recall_score(y_test, y_pred))
+        st.write (f'F1_score =', f1_score(y_test, y_pred))
+
 
 #### Evaluation ####
 
 
 
-st.write (f'Report = {classification_report(y_test, y_pred)}')
+#st.write (f'Report = {classification_report(y_test, y_pred)}')
 
 
 cmx = confusion_matrix(y_test, y_pred)
