@@ -103,9 +103,7 @@ acc = accuracy_score(y_test, y_pred)
 
 st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc)
-def get_dataset(name):
-    data = None
-    if name == 'Breast Cancer':
+    if dataset_name == 'Breast Cancer':
         st.write (f'Precision =', precision_score(y_test, y_pred))
         st.write (f'Recall =', recall_score(y_test, y_pred))
         st.write (f'F1_score =', f1_score(y_test, y_pred))
