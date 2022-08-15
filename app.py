@@ -13,9 +13,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import f1_score
+#from sklearn.metrics import precision_score
+#from sklearn.metrics import recall_score
+#from sklearn.metrics import f1_score
 
 st.title('Machine Learning Project')
 
@@ -48,9 +48,6 @@ def get_dataset(name):
     X = data.data
     y = data.target
     return X, y
-        st.write (f'Precision =', precision_score(y_test, y_pred))
-        st.write (f'Recall =', recall_score(y_test, y_pred))
-        st.write (f'F1_score =', f1_score(y_test, y_pred))
 
 X, y = get_dataset(dataset_name)
 st.write('Shape of dataset:', X.shape)
@@ -106,6 +103,9 @@ acc = accuracy_score(y_test, y_pred)
 
 st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc)
+#st.write (f'Precision =', precision_score(y_test, y_pred))
+#st.write (f'Recall =', recall_score(y_test, y_pred))
+#st.write (f'F1_score =', f1_score(y_test, y_pred))
 
 
 
@@ -113,10 +113,10 @@ st.write(f'Accuracy =', acc)
 
 
 
-#st.write (f'Report = {classification_report(y_test, y_pred)}')
+#st.write (classification_report(y_test, y_pred))
 
 
 cmx = confusion_matrix(y_test, y_pred)
-sns.heatmap(cmx, square= True, annot= True)
+fig = sns.heatmap(cmx, square= True, annot= True)
        
-st.plt.show()
+st.plt.show(fig)
