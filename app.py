@@ -100,15 +100,12 @@ clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 
 acc = accuracy_score(y_test, y_pred)
-f1s = f1_score(y_test, y_pred)
-prc = precision_score(y_test, y_pred)
-rec = recall_score(y_test, y_pred)
 
 st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc)
-st.write(f'precision =', prc)
-st.write(f'recall =', rec)
-st.write(f'f1_score =', f1s)
+st.write (f'precision = {precision_score(y_test, y_pred)}')
+st.write (f'recall = {recall_score(y_test, y_pred)}')
+st.write (f'f1_score = {f1_score(y_test, y_pred)}')
 
 #### Evaluation ####
 
