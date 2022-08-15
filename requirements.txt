@@ -12,10 +12,3 @@ urllib3==1.26.10
 pyarrow==8.0.0
 packaging==21.3
 Pillow==9.2.0
-slickml==0.1.5
-shap==0.39.0
-bayesian-optimization==1.2.0
-hyperopt==0.2.5
-glmnet==2.2.1
-plotly==5.3.1
-graphviz==0.14
