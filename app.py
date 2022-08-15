@@ -111,7 +111,7 @@ st.write (f'F1_score =', f1_score(y_test, y_pred))
 
 
 
-#st.write (f'Report = {classification_report(y_test, y_pred)}')
+st.write (f'Report = {classification_report(y_test, y_pred)}')
 
 
 cmx = confusion_matrix(y_test, y_pred)
