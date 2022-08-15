@@ -19,4 +19,3 @@ hyperopt==0.2.5
 glmnet==2.2.1
 plotly==5.3.1
 graphviz==0.14
-streamlit-drawable-canvas==0.8.0
