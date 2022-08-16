@@ -107,13 +107,12 @@ st.write(f'Accuracy =', acc)
 #st.write (f'Recall =', recall_score(y_test, y_pred))
 #st.write (f'F1_score =', f1_score(y_test, y_pred))
 
-plt.figure()
-
+fig2 = plt.figure()
 sns.display(y_test-y_pred)
 plt.title("data")
 plt.xlabel("y_test")
 plt.ylabel("y_pred")
-st.plt.show()
+st.plt.show(fig2)
 
 #### Evaluation ####
 
