@@ -116,7 +116,11 @@ st.write(f'Accuracy =', acc)
 #st.write (classification_report(y_test, y_pred))
 
 
-cmx = confusion_matrix(y_test, y_pred)
-sns.heatmap(cmx, square= True, annot= True)
+
+
+fig = plt.figure(figsize=(10, 4))
+    cmx = confusion_matrix(y_test, y_pred)
+    sns.heatmap(cmx, square= True, annot= True)
+    st.pyplot(fig)
 
 #st.pyplot(fig)
