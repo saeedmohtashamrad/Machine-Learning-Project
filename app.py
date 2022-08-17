@@ -26,7 +26,7 @@ Which one is the better?
 
 dataset_name = st.sidebar.selectbox(
     'Select Dataset',
-    ('Iris','Digits', 'Breast Cancer' )
+    ('Breast Cancer','Iris', 'Digits' )
 )
 
 st.write(f"## {dataset_name} Dataset")
@@ -38,13 +38,13 @@ classifier_name = st.sidebar.selectbox(
 
 def get_dataset(name):
     data = None
-    if name == 'Iris':
+    if name == 'Breast Cancer':
+        data = datasets.load_breast_cancer()
+    elif name == 'Iris':
         data = datasets.load_iris()
-    elif name == 'Digits':
-        data = datasets.load_digits()
 
     else:
-        data = datasets.load_breast_cancer()
+        data = datasets.load_digits()
     X = data.data
     y = data.target
     return X, y
