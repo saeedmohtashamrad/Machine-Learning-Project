@@ -95,7 +95,7 @@ def get_classifier(clf_name, params):
             clf = RandomForestClassifier(n_estimators=params['n_estimators'], 
             max_depth=params['max_depth'], random_state=42)    
     else:
-        clf = clf = XGBClassifier(n_estimators=params['n_estimators'], 
+        clf = XGBClassifier(n_estimators=params['n_estimators'], 
         max_depth=params['max_depth'],learning_rate=params['learning_rate'], random_state=42)
     return clf
 
