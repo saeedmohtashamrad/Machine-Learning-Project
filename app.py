@@ -66,13 +66,13 @@ def add_parameter_ui(clf_name):
         params['max_depth'] = max_depth
         n_estimators = st.sidebar.slider('n_estimators', 1, 100)
         params['n_estimators'] = n_estimators
-    #elif clf_name == 'XGBoost':
-        #max_depth = st.sidebar.slider('max_depth', 2, 15)
-        #params['max_depth'] = max_depth
-        #n_estimators = st.sidebar.slider('n_estimators', 1, 100)
-        #params['n_estimators'] = n_estimators
-        #learning_rate = st.sidebar.select_slider('learning_rate', options=np.linspace(0,2,num=20))
-        #params['learning_rate'] = learning_rate   
+    elif clf_name == 'XGBoost':
+        max_depth = st.sidebar.slider('max_depth', 2, 15)
+        params['max_depth'] = max_depth
+        n_estimators = st.sidebar.slider('n_estimators', 1, 100)
+        params['n_estimators'] = n_estimators
+        learning_rate = st.sidebar.select_slider('learning_rate', options=np.linspace(0,2,num=20))
+        params['learning_rate'] = learning_rate   
     else:
         max_depth = st.sidebar.slider('max_depth', 2, 15)
         params['max_depth'] = max_depth
