@@ -78,8 +78,7 @@ def add_parameter_ui(clf_name):
         params['max_depth'] = max_depth
         n_estimators = st.sidebar.slider('n_estimators', 1, 100)
         params['n_estimators'] = n_estimators
-        learning_rate = st.sidebar.select_slider('learning_rate', options=np.linspace(0,2,num=20))
-        params['learning_rate'] = learning_rate  
+ 
 
     return params
 
@@ -93,10 +92,13 @@ def get_classifier(clf_name, params):
         clf = KNeighborsClassifier(n_neighbors=params['K'])
     elif  clf_name == 'Random Forest':
             clf = RandomForestClassifier(n_estimators=params['n_estimators'], 
-            max_depth=params['max_depth'], random_state=42)    
+            max_depth=params['max_depth'], random_state=42) 
+    elif  clf_name == 'XGBoost':
+            clf = RandomForestClassifier(n_estimators=params['n_estimators'], 
+            max_depth=params['max_depth'], random_state=42) 
     else:
         clf = XGBClassifier(n_estimators=params['n_estimators'], 
-        max_depth=params['max_depth'],learning_rate=params['learning_rate'], random_state=42)
+        max_depth=params['max_depth'], random_state=42)
     return clf
 
 clf = get_classifier(classifier_name, params)
